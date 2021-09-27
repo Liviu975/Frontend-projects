@@ -1,0 +1,124 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;	
+	background-image: url("back7.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+
+.box{
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+
+.box h1{
+	text-transform: uppercase;
+	font-size: 60px;
+	margin: 20px;
+	letter-spacing: 10px;
+	color: rgb(180, 180, 180);
+}
+
+
+.box h2{
+	text-transform: uppercase;
+	margin: 20px;
+	color: white;
+}
+
+.box h2::before{
+	content: "";
+	display: inline-block;
+	tranform: rotate(90deg);
+	width: 25px;
+	border: 0.5px solid dodgerblue;
+	background-color: dodgerblue;
+	vertical-align : super;
+	margin-right: 5px;
+}
+
+
+.box h2::after{
+	content: "";
+	display: inline-block;
+	tranform: rotate(90deg);
+	width: 25px;
+	border: 1px solid dodgerblue;
+	background-color: dodgerblue;
+	vertical-align: super;
+	margin-left: 5px;
+	color: green;
+}
+
+.pro{
+	width: 0;
+	background-color: dodgerblue;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: white;
+	text-align: center;
+	transition: 1s;
+	transition-delay: 0.3s;
+}
+
+
+.pro span{
+	vertical-align: sub;
+	display: inline-block;
+}
+
+#pro{
+	padding: 6px;
+	opacity: 0;
+	transition: 1.5s;
+	transition-delay: .7s;
+}
+
+#pro3{
+	opacity: 0;
+	transition: 1.5s;
+	transition-delay: .7s;
+}
+
+
+.white-bar{	
+	transform: translateX(22.5%);
+	height: 30px;
+	display: block;
+	width: 70%;
+	background-color: white;	
+	margin-bottom: 20px;
+	opacity: 0;
+	transition: .3s linear;
+}
+
+
+.ball{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 2px solid white;
+	margin: 0 30px;
+	font-size: 12px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+}
+
+.ball i{
+	vertical-align: sub;
+	font-size: 20px;
+	margin-top: 5px;
+	color: dodgerblue;
+}

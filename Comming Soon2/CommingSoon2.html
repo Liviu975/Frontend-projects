@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Coming Soon</title>
+<link rel="stylesheet" href="CommingSoon2.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+
+
+<div class="box">
+
+
+	<h2>Our new site</h2>
+	<h1>Coming Soon</h1>
+	 
+	<div class="white-bar" id="white-bar">
+		<div class="pro" id="pro2"> <span id="pro">00</span><span id="pro3">%</span></div>
+	</div>
+	
+	<div class="ball">
+		<a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+	</div>
+	
+	<div class="ball">
+		<a href="#instagram"><i class="fab fa-instagram"></i></a>
+	</div>
+	
+	<div class="ball">
+		<a href="#facebook"><i class="far fa-envelope"></i></a>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+	var count = new Date("aug 15,2021 00:00:00").getTime();
+	var count1 =new Date("dec 10,2020 00:00:00").getTime();
+	var x = setInterval(function() {
+		var now = new Date().getTime();
+		var d = count - now;
+		
+		var days2 = Math.floor((count-count1)/(1000*60*60*24));
+		var days = Math.floor(d/(1000*60*60*24));
+		
+		var dif = days2 - days;
+		
+		var p = ((dif*100)/days2).toFixed(2);
+		
+		
+		document.getElementById("pro").innerHTML= p;
+		document.getElementById("pro2").style.width = p + '%';
+		
+		document.getElementById("pro").style.opacity = "1";
+		document.getElementById("pro3").style.opacity = "1";
+		document.getElementById("white-bar").style.opacity = "1";
+		
+		if(d <= 0){
+			clearInterval(x);
+		}
+		
+	},1000);
+</script>
+
+
+
+</body>
+</html>
