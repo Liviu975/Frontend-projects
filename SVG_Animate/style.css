@@ -1,0 +1,268 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	text-align: center;
+}
+
+.SVG2{
+	width: 300px;
+	height: 300px;
+	text-align: center;
+}
+
+
+.SVG2 svg{
+	width: 100%;
+	height: 100%;
+}
+
+
+#frame-group{
+	animation: fade 0.5s;
+}
+
+
+#paragraphs{
+	animation: fade 0.5s ease-in;
+	
+}
+
+
+#bars1 path:nth-child(1){
+	animation: show 0.5s ease-in;
+	transform-origin: 102px;
+}
+
+
+#bars1 path:nth-child(2){
+	animation: show 0.5s ease-in;
+	transform-origin: 50px;
+}
+
+
+#bars1 path:nth-child(3){
+	animation: show 0.5s ease-in;
+	transform-origin: 50px;
+}
+
+
+
+#bars2 path:nth-child(1){
+	animation: show 1.2s ease-in-out infinite alternate;
+	transform-origin: 102px;
+	animation-delay: 0.5s;
+	transform: scaleX(0);
+	animation-fill-mode: forwards;
+}
+
+
+#bars2 path:nth-child(2), #bars2 path:nth-child(3){
+	animation: show 1.5s ease-in-out infinite alternate;
+	transform-origin: 50px;
+	animation-delay: 0.5s;
+	transform: scaleX(0);
+	animation-fill-mode: forwards;
+}
+
+
+#bars3 path:nth-child(1){
+	animation: show 1.5s ease-in-out infinite alternate;
+	transform-origin: 102px;
+	animation-delay: 1s;
+	transform: scaleX(0);
+	animation-fill-mode: forwards;
+}
+
+
+#bars3 path:nth-child(2), #bars3 path:nth-child(3){
+	animation: show 1.2s ease-in-out infinite alternate;
+	transform-origin: 50px;
+	animation-delay: 1s;
+	transform: scaleX(0);
+	animation-fill-mode: forwards;
+}
+
+
+#head{
+	animation: rotate 2s ease-in-out infinite alternate;
+	transform-origin: bottom;
+	transform-box: fill-box;
+}
+
+
+#left-arm{
+	animation: rotate-left 2s ease-in-out infinite alternate;
+	transform-origin: top;
+	transform-box: fill-box;
+}
+
+#right-arm{
+	animation: rotate-right 2s ease-in-out infinite alternate;
+	transform-origin: top;
+	transform-box: fill-box;
+}
+
+
+@keyframes rotate-right{
+	from{
+		transform: rotateZ(-20deg);
+	}
+	to{
+		transform: rotateZ(0deg);
+	}
+}
+
+
+
+
+
+@keyframes rotate-left{
+	from{
+		transform: rotateZ(20deg) translateY(5px);
+	}
+	to{
+		transform: rotateZ(0deg) translate(0px);
+	}
+}
+
+
+
+
+@keyframes rotate{
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+		transform: rotateZ(-30deg);
+	}
+}
+
+
+
+
+
+@keyframes show{
+	from{
+		transform: scaleX(0.3);
+	}
+	to{
+		transform: scaleX(1);
+	}
+}
+
+
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.SVG{
+	height: 300px;
+	width: 300px;
+	animation: ride 3s ease-in-out infinite alternate;
+	
+}
+
+
+
+
+
+.SVG svg{
+	background-color: white; 
+	height: 300px;
+	width: 300px;
+	
+}
+
+#man-bike{
+	animation: bike 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
+
+#right-wheel,#left-wheel{
+	animation: wheel 3s ease-in-out infinite alternate;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+#hat{
+	animation: hat 1s ease-in-out infinite alternate;
+	
+}
+
+@keyframes ride{
+	0%{
+		transform: translateX(0) rotateZ(0deg);
+	}
+
+	
+	100%{
+		transform: translateX(500px) rotateZ(-45deg);
+	}
+}
+
+
+@keyframes hat{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(40px);
+	}
+}
+
+
+@keyframes wheel{
+	from{
+		transform: rotateZ(0deg);
+	}
+	
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes bike{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(20deg);
+	}
+}
